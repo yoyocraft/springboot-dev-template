@@ -1,0 +1,6 @@
+# global spring config
+spring:
+  application:
+    name: springboot-dev-template
+  profiles:
+    active: local
