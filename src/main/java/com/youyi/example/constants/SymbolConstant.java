@@ -12,4 +12,5 @@ public class SymbolConstant {
     public static final String RIGHT_BRACKET = "]";
     public static final String HASH = "#";
     public static final String DOT = ".";
+    public static final String SLASH = "/";
 }
