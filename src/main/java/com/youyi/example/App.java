@@ -1,5 +1,6 @@
 package com.youyi.example;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,7 @@ import org.springframework.context.event.EventListener;
  * @author yoyocraft
  * @date 2024/09/13
  */
+@MapperScan(basePackages = {"com.youyi.example.dao"})
 @SpringBootApplication
 public class App {
 

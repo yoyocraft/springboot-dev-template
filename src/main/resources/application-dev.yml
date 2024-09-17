@@ -1,0 +1,19 @@
+# web
+server:
+  port: 8081
+
+# log path
+LOG_PATH: /Users/youyi/logs
+
+# knife4j config
+knife4j:
+  enable: true
+  openapi:
+    title: SpringBoot Dev Template
+    version: 1.0.0
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.youyi.example.controller

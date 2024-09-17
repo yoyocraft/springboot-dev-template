@@ -47,12 +47,12 @@ public class DataSourceConfigLoader implements BeanPostProcessor, EnvironmentAwa
         if (bean instanceof MybatisAutoConfiguration) {
             String config = readDataSourceConfig();
             JSONObject configJson = JSON.parseObject(config);
-            Map<String, Object> systemEnvironment = environment.getSystemEnvironment();
-            systemEnvironment.put(ConfigConstant.DB_TYPE, ConfigConstant.DB_TYPE_VALUE);
-            systemEnvironment.put(ConfigConstant.DB_DRIVER_CLASS_NAME, ConfigConstant.DB_DRIVER_CLASS_NAME_VALUE);
-            systemEnvironment.put(ConfigConstant.DB_URL, configJson.getString(ConfigConstant.URL_KEY));
-            systemEnvironment.put(ConfigConstant.DB_USERNAME, configJson.getString(ConfigConstant.USERNAME_KEY));
-            systemEnvironment.put(ConfigConstant.DB_PASSWORD, configJson.getString(ConfigConstant.PASSWORD_KEY));
+            Map<String, Object> systemProperties = environment.getSystemProperties();
+            systemProperties.put(ConfigConstant.DB_TYPE, ConfigConstant.DB_TYPE_VALUE);
+            systemProperties.put(ConfigConstant.DB_DRIVER_CLASS_NAME, ConfigConstant.DB_DRIVER_CLASS_NAME_VALUE);
+            systemProperties.put(ConfigConstant.DB_URL, configJson.getString(ConfigConstant.URL_KEY));
+            systemProperties.put(ConfigConstant.DB_USERNAME, configJson.getString(ConfigConstant.USERNAME_KEY));
+            systemProperties.put(ConfigConstant.DB_PASSWORD, configJson.getString(ConfigConstant.PASSWORD_KEY));
         }
         return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
     }

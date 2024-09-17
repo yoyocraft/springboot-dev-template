@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public class ParameterCheckAspect {
 
     @Pointcut("@annotation(com.youyi.example.aspect.ParameterCheck) || " +
-            "@execution(* com.youyi.example.controller..*.*(..))")
+            "execution(* com.youyi.example.controller..*.*(..))")
     public void pointCut() {
     }
 
