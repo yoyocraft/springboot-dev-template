@@ -66,7 +66,7 @@ public class RequestLogAspect {
 
             long costTime = System.currentTimeMillis() - startTime;
             if (costTime > 200) {
-                LOGGER.info("耗时接口: {}ms, requestLog: {}", costTime, requestLogBuilder);
+                LOGGER.warn("耗时接口: {}ms, requestLog: {}", costTime, requestLogBuilder);
             }
 
             if (result != null) {

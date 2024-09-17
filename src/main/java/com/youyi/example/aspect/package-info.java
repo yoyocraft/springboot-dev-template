@@ -1,6 +1,6 @@
 /**
  * <p>Aspect Order:</p>
- * RequestLogAspect -> ExceptionHandlerAspect -> LoggedCheckAspect -> ParameterCheckAspect
+ * RequestLogAspect -> ExceptionHandlerAspect -> LoggedCheckAspect -> ParameterCheckAspect -> RepeatSubmitAspect
  *
  * @author yoyocraft
  * @date 2024/09/13
